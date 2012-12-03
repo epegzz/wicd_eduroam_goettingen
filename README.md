@@ -22,6 +22,10 @@ encryption type select box.
 __Note:__ The template assumes that the following certificate is installed on
 your system: `/usr/share/ca-certificates/mozilla/Deutsche_Telekom_Root_CA_2.crt`
 
+You can verify the location of the certificate on your system with:
+
+    locate .crt | grep -i telekom
+
 If this certificate is located somewhere else on your system, either open
 an issue here on github and I will make the certificate path editable or
 edit the path manually yourself in the template.
