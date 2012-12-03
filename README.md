@@ -1,4 +1,3 @@
-
 A wicd network manager template for the eduroam network in Göttingen
 ====================================================================
 
@@ -16,14 +15,17 @@ Next, activate the new template by simply issuing the following command:
     sudo echo 'eduroam_goettingen' >> /etc/wicd/encryption/templates/active
 
 That's it. You should now be able to select "eduroam_goettingen" from the
-Encryption type select box (no wicd restart required).
+encryption type select box.
 
-_Note:_ The template assumes that the following certificate is installed on
+
+
+__Note:__ The template assumes that the following certificate is installed on
 your system: `/usr/share/ca-certificates/mozilla/Deutsche_Telekom_Root_CA_2.crt`
+
 If this certificate is located somewhere else on your system, either open
 an issue here on github and I will make the certificate path editable or
 edit the path manually yourself in the template.
 
 Oh, and because we all like screenshots:
 
-<img src="screenshot.png">
+<img src="https://raw.github.com/epegzz/wicd_eduroam_goettingen/master/screenshot.png">
