@@ -1,0 +1,21 @@
+name = Eduroam Goettingen
+author = Daniel Schaefer <epegzz@gmail.com>
+version = 1
+require identity *Identity password *Password
+-----
+ctrl_interface=/var/run/wpa_supplicant
+network={
+    ssid="$_ESSID"
+    scan_ssid=$_SCAN
+
+    key_mgmt=WPA-EAP
+    eap=TTLS
+
+    ca_cert="/usr/share/ca-certificates/mozilla/Deutsche_Telekom_Root_CA_2.crt"
+
+    phase2="auth=MSCHAPv2 auth=PAP"
+
+    anonymous_identity="anonymous@gwdg.de"
+    identity="$_IDENTITY"
+    password="$_PASSWORD"
+}
